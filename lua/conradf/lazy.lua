@@ -1,4 +1,4 @@
-themeNumber = 3
+themeNumber = 4
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -14,40 +14,38 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 plugins = {
-    { 'nvim-telescope/telescope.nvim', tag = '0.1.5', },
+    { 'nvim-telescope/telescope.nvim', tag = '0.1.5', priority = 1000 },
 
-    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", },
+    { "nvim-treesitter/nvim-treesitter",priority = 1000, build = ":TSUpdate", },
     { "nvim-treesitter/nvim-treesitter-context" },
 
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
 
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-    {'neovim/nvim-lspconfig'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/nvim-cmp'},
-    {'L3MON4D3/LuaSnip'},
-    {"nvim-lua/plenary.nvim"},
+    {'neovim/nvim-lspconfig', priority = 100},
+    {'hrsh7th/cmp-nvim-lsp', priority = 100},
+    {'hrsh7th/nvim-cmp', priority = 100},
+    {'L3MON4D3/LuaSnip', priority = 100},
+    {"nvim-lua/plenary.nvim", priority = 100},
 
-    { 'nvim-telescope/telescope.nvim', tag = '0.1.5', },
+    {'ThePrimeagen/vim-be-good'},
+    {'ThePrimeagen/harpoon'},
 
-    { 'ThePrimeagen/vim-be-good' },
-    { 'ThePrimeagen/harpoon' },
+    {'windwp/nvim-autopairs', event = "InsertEnter", opts = {}},
+    {'fatih/vim-go', run = 'GoUpdateBinaries'},
 
-    { 'windwp/nvim-autopairs', event = "InsertEnter", opts = {}},
-    { 'fatih/vim-go', run = 'GoUpdateBinaries'},
+    {'nvim-tree/nvim-web-devicons' },
+    {'nvim-lualine/lualine.nvim' },
 
-    { 'nvim-tree/nvim-web-devicons' },
-    { 'nvim-lualine/lualine.nvim' },
-
-    { 'tpope/vim-fugitive'},
+    {'tpope/vim-fugitive'},
 }
 
 local themes = {
     {"conweller/muted.vim", "muted"},
     {"junegunn/seoul256.vim", "seoul256"},
     {"sainnhe/everforest", "everforest"},
-    {"EdenEast/nightfox.nvim", "nightfox"},
+    {"EdenEast/nightfox.nvim", "nordfox"},
     {"sainnhe/sonokai", "sonokai"}
 }
 
