@@ -1,17 +1,12 @@
 return {
-    {
-        "EdenEast/nightfox.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            vim.cmd.colorscheme "nordfox"
-        end
-    },
+    { "EdenEast/nightfox.nvim" },
+    { "conweller/muted.vim" },
+    { "sainnhe/sonokai" },
+    { "KeitaNakamura/neodark.vim" },
     {
         "goolord/alpha-nvim",
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
-
-    }
+    },
 }
