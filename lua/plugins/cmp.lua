@@ -7,6 +7,7 @@ return {
     config = function()
         -- Credit for borders: nvchad/base46
         local cmp = require("cmp")
+        local select_behavior = { behavior = cmp.SelectBehavior.Select }
 
         cmp.setup({
             window = {
@@ -22,8 +23,8 @@ return {
             mapping = {
                 ["<C-Space>"] = cmp.mapping.complete(),
                 ["<C-y>"] = cmp.mapping.confirm({ select = true }),
-                ["<C-n>"] = cmp.mapping.select_next_item(),
-                ["<C-p>"] = cmp.mapping.select_prev_item(),
+                ["<C-n>"] = cmp.mapping.select_next_item(select_behavior),
+                ["<C-p>"] = cmp.mapping.select_prev_item(select_behavior),
                 ["<CR>"] = nil, -- do not complete on <CR>
             },
             -- Use lsp and snippets
