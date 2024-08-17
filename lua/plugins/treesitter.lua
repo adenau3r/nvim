@@ -1,7 +1,7 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    cmd = "TSConfigInfo",
+    cmd = "TSUpdate",
     ft = vim.g.known_fts,
     config = function()
         require("nvim-treesitter.configs").setup{
