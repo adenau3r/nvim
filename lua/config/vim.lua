@@ -41,3 +41,6 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+vim.keymap.set("n", "<C-g>", function ()
+    os.execute("tmux split-window -h 'lazygit'")
+end)
