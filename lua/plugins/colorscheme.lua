@@ -1,14 +1,12 @@
 return {
     {
-        --"savq/melange-nvim",
         "rose-pine/neovim",
         as = "rose-pine",
         priority = 100,
         config = function()
             vim.opt.termguicolors = true
-            -- vim.cmd.colorscheme "melange"
-            vim.cmd.colorscheme "rose-pine-dawn"
-            vim.opt.background = "light"
+            vim.cmd.colorscheme "rose-pine-moon"
+            vim.opt.background = "dark"
 
             --vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
 
