@@ -1,6 +1,6 @@
 -- Store in vim.g since multiple plugins use for lazy loading and it should be
 -- faster than requiring the module in each of them.
-vim.g.known_fts = { "go", "rust", "lua", "vimdoc", "zig", }
+vim.g.known_fts = { "go", "rust", "lua", "vimdoc", "zig", "c"}
 
 local M = {}
 
@@ -24,6 +24,7 @@ M.GetDefaultServers = function(lsp)
         lsp.rust_analyzer,
         lsp.lua_ls,
         lsp.zls,
+        lsp.clangd,
     }
 end
 
